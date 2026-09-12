@@ -3,7 +3,7 @@ import os
 def limpa_tela():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-
+'''
 def menu():
     limpa_tela()
 
@@ -16,6 +16,7 @@ def menu():
     """)
     opcao = int(input("-> "))
     return opcao
+'''
 
 #
 
