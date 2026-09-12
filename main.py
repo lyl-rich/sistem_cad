@@ -3,9 +3,9 @@ import funcoes
 
 usuarios = {
     "admin": {"nome": "rich", "senha": "12345"},
-    "will": {"nome": "Willame", "senha": "09876"},
-    "dani": {"nome": "Daniel", "senha": "dnl3456"},
-    "joaozin": {"nome": "Joao", "senha": "20212"},
+#    "will": {"nome": "Willame", "senha": "09876"},
+#    "dani": {"nome": "Daniel", "senha": "dnl3456"},
+#    "joaozin": {"nome": "Joao", "senha": "20212"},
     }
 
 print("-=-=-=-SISTEMA_RICH-=-=-=-=")
@@ -15,7 +15,17 @@ while True:
 
     if (logadm in usuarios and senhadm == usuarios[logadm]["senha"]):
         while True:
-            opcao = funcoes.menu()
+            #opcao = funcoes.menu()
+            funcoes.limpa_tela()
+            print("""-=-=-=-SISTEMA_RICH-=-=-=-=
+[1] Adicionar usuário
+[2] Remover
+[3] Pesquisar
+[4] Listar
+[5] Sair
+            """)
+            opcao = int(input("-> "))
+
             match opcao:
                 case 1:
                     funcoes.add_usuario(usuarios)
