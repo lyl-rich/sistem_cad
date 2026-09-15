@@ -3,21 +3,6 @@ import os
 def limpa_tela():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-'''
-def menu():
-    limpa_tela()
-
-    print("""
-[1] Adicionar usuário
-[2] Remover
-[3] Pesquisar
-[4] Listar
-[5] Sair
-    """)
-    opcao = int(input("-> "))
-    return opcao
-'''
-
 #
 
 def add_usuario(usuarios):
@@ -35,7 +20,6 @@ def add_usuario(usuarios):
             "nome": input("Nome:\n").title().strip()
             }
         
-        #print(usuarios)    conferir
         print("\nADICIONADO!")
 
         rep = input("\n[press] - Adicionar outro\n[1] - Voltar\n-> ")
@@ -54,7 +38,6 @@ def remover(usuarios,logadm):
 
         if remover in usuarios and remover != logadm:
             del usuarios[remover]
-            #print(usuarios)    conferir
             print(f"'{remover}' REMOVIDO(A)!\n")
         else:
             print("Erro, usuário não encontrado ou restrito.")
