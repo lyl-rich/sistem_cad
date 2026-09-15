@@ -1,11 +1,8 @@
 from sys import exit
-import funcoes
+import funcoes  # from funcoes import *
 
 usuarios = {
     "admin": {"nome": "rich", "senha": "12345"},
-#    "will": {"nome": "Willame", "senha": "09876"},
-#    "dani": {"nome": "Daniel", "senha": "dnl3456"},
-#    "joaozin": {"nome": "Joao", "senha": "20212"},
     }
 
 print("-=-=-=-SISTEMA_RICH-=-=-=-=")
@@ -15,7 +12,6 @@ while True:
 
     if (logadm in usuarios and senhadm == usuarios[logadm]["senha"]):
         while True:
-            #opcao = funcoes.menu()
             funcoes.limpa_tela()
             print("""-=-=-=-SISTEMA_RICH-=-=-=-=
 [1] Adicionar usuário
@@ -37,7 +33,7 @@ while True:
                     funcoes.listar(usuarios)
                 case 5:
                     print("Concluído.")
-                    exit()
+                    exit()  # ou break
                 case _:
                     print("Inválido.")
                     input("Presione para retornar")
